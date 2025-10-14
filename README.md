@@ -3,7 +3,7 @@
 ## 📘 Project Description
 
 This interactive map highlights the **art and culture locations** across **Lexington, Kentucky**, including murals, sculptures, galleries, theatres, and other public art installations.  
-It allows users to explore cultural landmarks and view detailed information such as names, descriptions, addresses, and website links—through interactive pop-ups.
+It allows users to explore cultural landmarks and view detailed information such as names, descriptions, addresses, and website links; through interactive pop-ups.
 
 ---
 

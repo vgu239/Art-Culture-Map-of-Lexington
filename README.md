@@ -24,9 +24,10 @@ Additional datasets used:
 
 ### 🔗 Data Access
 All processed data are available in this repository in the **`/QGIS`** folder:
-- `art_and_culture_points.geojson`  
+- `centroid_1.geojson`
+- `tourism.geojson`  
 - `lexington_boundary.geojson`  
-- `footpaths.geojson`
+- `footpath.geojson`
 
 These layers can be opened in **QGIS** or **Mapbox Studio** for further editing or reuse.
 
@@ -87,7 +88,8 @@ The workflow below outlines the full process so it can be replicated for a new l
   - Roads, labels, water, and buildings for navigation
   - Soft, subtle colors to make art features stand out
 
-![Step 4 – Tileset Upload and Styling](Project_screenshots/4.png)!(Project_screenshots/5.png) 
+![Step 4 – Tileset Upload and Styling](Project_screenshots/4.png)
+![Step 4 – Tileset Upload and Styling](Project_screenshots/5.png)
 
 ---
 

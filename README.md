@@ -104,11 +104,11 @@ The workflow below outlines the full process so it can be replicated for a new l
 
 ### **Step 6: Building the Interactive Map**
 - Created `index.html` and linked Mapbox GL JS.  
-- Added interactive **pop-up functionality** that displays:
+- Added interactive **pop-up functionality** that displays (if information is available):
   - Name  
   - Description  
   - Address  
-  - Website (if available)
+  - Website 
 - Included a **geolocation control** and a **fullscreen map link**.
 
 ![Step 6 – HTML Code Integration](Project_screenshots/7.png)

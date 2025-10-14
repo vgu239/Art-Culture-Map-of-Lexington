@@ -153,7 +153,7 @@ All final layers were standardized to **EPSG:4326** before export to ensure comp
 | **QGIS + QuickOSM** | Extract and process OSM data |
 | **Mapbox Studio** | Create and style custom basemap |
 | **Mapbox GL JS** | Add interactivity to the map |
-| **HTML / CSS / JS** | Develop and host the web map |
+| **HTML** | Develop and host the web map |
 | **GitHub Pages** | Host the final project |
 | **Flaticon** | Source for SVG icons |
 

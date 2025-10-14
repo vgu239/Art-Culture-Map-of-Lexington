@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>US County Map - Pastel Old Style</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+
+    /* Popup styling */
+    .mapboxgl-popup {
+      max-width: 250px;
+      font-family: "Georgia", serif;
+      background-color: #fffaf0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .mapboxgl-popup-content h3 {
+      margin: 0 0 5px;
+      font-size: 16px;
+      color: #3e2723;
+    }
+    .mapboxgl-popup-content p {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: #5d4037;
+    }
+    .mapboxgl-popup-content a {
+      color: #1e88e5;
+      text-decoration: none;
+    }
+    .mapboxgl-popup-content a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+  // --- Access Token ---
+  mapboxgl.accessToken = 'pk.eyJ1Ijoidmd1MjM5IiwiYSI6ImNtZzFnZjZ2ODBuczkyaW9reDFtMDU3cDYifQ.CmVzAzn4cocOb8rnpY8G5Q';
+
+  // --- Initialize Map ---
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/vgu239/cmgmgjgvh00b101qe8f8mde7j', // your custom style
+    center: [-84.547141, 38.015193],
+    zoom: 10
+  });
+
+  // --- Add Popups on Click ---
+  map.on('click', (event) => {
+    const features = map.queryRenderedFeatures(event.point, {
+      layers: ['tourism-1f5ndu', 'centroid-1-d7fdtz']
+    });
+
+    if (!features.length) return;
+
+    const feature = features[0];
+    const props = feature.properties;
+
+    // Handle capitalization differences in property names
+    const name = props.name || props.Name || 'Unnamed Place';
+    const description = props.description || props.Description || '';
+    const website = props.website || props.Website || '';
+
+    const htmlContent = `
+      <h3>${name}</h3>
+      <p>${description}</p>
+      ${website ? `<p><a href="${website}" target="_blank">Visit Website</a></p>` : ''}
+    `;
+
+    new mapboxgl.Popup({ offset: [0, -15] })
+      .setLngLat(feature.geometry.coordinates)
+      .setHTML(htmlContent)
+      .addTo(map);
+  });
+
+  // --- Add Geolocate Control ---
+  map.addControl(new mapboxgl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true
+  }));
+</script>
+
+</body>
+</html>

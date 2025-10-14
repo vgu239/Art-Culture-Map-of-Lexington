@@ -35,9 +35,9 @@ These layers can be opened in **QGIS** or **Mapbox Studio** for further editing 
 
 ## 💡 Purpose of the Map
 
-As an art enthusiast and a new resident of Lexington, I wanted to explore and visualize the city’s **public art and cultural landscape**.  
+As an art enthusiast and a new resident of Lexington, I wanted to explore and visualize the city's **public art and cultural landscape**.  
 This project helped me identify how creative expressions like murals, sculptures, and theatres; are distributed across the city.  
-The map aims to make these cultural sites easily discoverable for others interested in Lexington’s art scene.
+The map aims to make these cultural sites easily discoverable for others interested in Lexington's art scene.
 
 ---
 

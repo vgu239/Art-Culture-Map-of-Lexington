@@ -155,7 +155,7 @@ All final layers were standardized to **EPSG:4326** before export to ensure comp
 | **Mapbox GL JS** | Add interactivity to the map |
 | **HTML / CSS / JS** | Develop and host the web map |
 | **GitHub Pages** | Host the final project |
-| **Icons8 / Flaticon** | Source for SVG icons |
+| **Flaticon** | Source for SVG icons |
 
 ---
 
